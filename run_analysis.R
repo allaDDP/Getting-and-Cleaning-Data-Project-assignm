@@ -8,7 +8,7 @@ library (plyr)
 library (dplyr)
 library (reshape2)
 
-##Merges the training and the test sets to create one data set.
+## 1. Merges the training and the test sets to create one data set.
 
 ## set working directory at the folder "test" 
 setwd("C:/Users/rp/Documents/Clining data/course project/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/test")
@@ -67,7 +67,7 @@ data <- rbind(test, train)
 dim(data)
 
 
-##Extracts only the measurements on the mean and standard deviation for each measurement.
+## 2. Extracts only the measurements on the mean and standard deviation for each measurement.
         mean_d <- grep("mean",names(data),ignore.case=TRUE)
         
         std_d <- grep("std",names(data),ignore.case=TRUE)
@@ -82,7 +82,7 @@ data_activity_l <- read.table("activity_labels.txt", col.names=c("ID_activity","
 head(data_activity_l)
 dim(data_activity_l)
 
-##Appropriately labels the data set with descriptive variable names.
+## 4. Appropriately labels the data set with descriptive variable names.
 descr_nam <- merge(data_activity_l,data_meanstd,by.x="ID_activity",by.y="ID_activity",all=TRUE)
 
 ##Melt the dataset with the descriptive activity names 
