@@ -1,17 +1,17 @@
 # Getting-and-Cleaning-Data-Project-assignm
-+===================
+
 +Run_Analysis.R R-script 
 +data:
 +Human Activity Recognition Using Smartphones Dataset
 +Version 1.0
-+====================
+
 +by Alla Kolyban
-+====================
+
 +
 +The run_analysis.R script reads data from the "Human Activity Recognition Using Smartphones Dataset Version 1.0" and creates a tidy - dataset which may be used for later analysis.
 
 + Description of the script:
-+==================================
+
 +- It reads all .txt files, features and labels the datasets
 +
 +- The "cbind" and "rbind" functions are used to merge test and training data with appropriate names.
@@ -27,7 +27,7 @@
 +
 +
 + The original dataset included the following data files:
-+====================
+
 +- 'features.txt': List of all features.
 +
 +- 'activity_labels.txt': List of class labels and their activity name.
